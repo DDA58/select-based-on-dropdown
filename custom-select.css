@@ -1,0 +1,32 @@
+button.custom-select-dropdown {
+	min-width: 100%;
+	width: inherit;
+	background-color: #fff;
+	color: #000;
+	border-color: #000;
+	text-align: left;
+	border: 1px solid #d9d9d9;
+	border-radius: .1875em;
+	white-space: normal;
+	word-break: break-all;
+	height: 100%;
+}
+.dropdown-menu.custom-select-dropdown {
+	position: absolute;
+	will-change: transform;
+	width: 100%;
+	font-size: 16px;
+	z-index: 9999;
+	top: 0px;
+	left: 0px;
+	transform: translate3d(0px, -222px, 0px);
+}
+
+.dropdown-item.custom-select-dropdown {
+	max-width: 100%;
+	height: 100%;
+	white-space: normal;
+	width: 100%;
+	word-break: break-all;
+	height: 100%;
+}
