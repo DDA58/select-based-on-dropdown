@@ -8,18 +8,25 @@ button.custom-select-dropdown {
 	border: 1px solid #d9d9d9;
 	border-radius: .1875em;
 	white-space: normal;
-	word-break: break-all;
+	word-break: normal;
 	height: 100%;
+	line-height: 1.4em;
+	padding: 10px 10px;
+	margin-bottom: 10px;
 }
 .dropdown-menu.custom-select-dropdown {
 	position: absolute;
 	will-change: transform;
 	width: 100%;
 	font-size: 16px;
-	z-index: 9999;
+	z-index: 2;
 	top: 0px;
 	left: 0px;
 	transform: translate3d(0px, -222px, 0px);
+	overflow-y: auto;
+	overflow-x: none;
+	max-height: 60vh;
+	overflow-x: hidden;
 }
 
 .dropdown-item.custom-select-dropdown {
@@ -29,4 +36,11 @@ button.custom-select-dropdown {
 	width: 100%;
 	word-break: break-all;
 	height: 100%;
+	word-break: normal;
+	margin: 3px 0;
+}
+
+.dropdown-toggle::after {
+	float: right;
+	margin: 9px 0px 0px 0px;
 }
