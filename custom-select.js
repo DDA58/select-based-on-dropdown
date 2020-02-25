@@ -28,7 +28,6 @@ $(document).ready(function() {
 	})
 
 	function createCustomSelect(parentSelect) {
-		console.log(parentSelect);
 		if(!Boolean(parentSelect) || !Boolean(parentSelect.dataset.coupleId)){
 			console.error('Does not set data-couple-id for select');
 			return false;
@@ -81,7 +80,11 @@ $(document).ready(function() {
 		option.addEventListener('click', function(event) {
 			changeCustomSelectButtonData(event);
 
-			document.querySelector('select[data-couple-id="'+event.target.dataset.coupleId+'"]').value = event.target.dataset.value;
+			const parentSelect = document.querySelector('select[data-couple-id="'+event.target.dataset.coupleId+'"]');
+			parentSelect.value = event.target.dataset.value;
+
+			let eventChange = new Event("change", {bubbles: true});
+			parentSelect.dispatchEvent(eventChange);
 		});
 	}
 
