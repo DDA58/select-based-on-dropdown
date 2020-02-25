@@ -1,2 +1,2 @@
-# selec--based-on-dropdown
+# select-based-on-dropdown
 Custom html select based on bootstrap dropdown button
